@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: white;
+    }
+
+    .college-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      background-color: #03346E;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin: 50px auto;
+    }
+
+    .logo-container {
+      position: relative;
+      margin-left: 400px;
+      margin-right: 20px;
+      width: 220px;
+      height: 220px;
+    }
+
+    .logo-container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      box-sizing: border-box;
+      animation: move-border 3s linear infinite;
+     
+      background-size: 200% 200%;
+    }
+
+    @keyframes move-border {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .logo-container:hover:before {
+      background: linear-gradient(45deg, #ff0055, #ffcc00, #33cc33, #3399ff, #ff0055);
+      background-size: 200% 200%;
+    }
+
+    .logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .logo-container:hover .logo {
+      transform: scale(1.1); /* Zoom in effect */
+    }
+
+    .college-details {
+      line-height: 1.5;
+    }
+
+    .college-details h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .college-details .courses,
+    .college-details .address {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="college-info">
+    <div class="logo-container">
+      <img src="https://nacscs.ac.in/web-assets/img/college-logo.jpg" alt="College Logo" class="logo">
+    </div>
+    <div class="college-details">
+      <h1>New Arts, Commerce & Science College, Shevgaon</h1>
+      <br>
+      <div class="courses"> Computer Science  | Engineering   | Business</div>
+      <hr>
+      <div class="address">Tal - Shevgaon, Dist - Ahmednagar (M.S.), Pin - 414 502</div>
+    </div>
+  </div>
+</body>
+</html>
